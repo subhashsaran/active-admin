@@ -5,6 +5,8 @@ ActiveAdmin.register AdminUser do
 def password_required?
   new_record? ? false : super
 end
+
+
   permit_params :email, :password, :password_confirmation
 
   
