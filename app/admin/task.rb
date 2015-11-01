@@ -11,6 +11,7 @@ scope :mine do |tasks|
   tasks.where(:admin_user_id => current_admin_user.id)
 end
 
+
 show do
   panel "Task Details" do
     attributes_table_for task do

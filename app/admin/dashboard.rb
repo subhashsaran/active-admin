@@ -11,8 +11,7 @@ ActiveAdmin.register_page "Dashboard" do
     end
     
 
-
-    panel "Your tasks for this week" do
+ panel "Your tasks for this week" do
     table_for current_admin_user.tasks.where('due_date > ? and due_date < ?', Time.now, 1.week.from_now) do |t|
       t.column("Status") { |task| status_tag (task.is_done ? "Done" : "Pending"), (task.is_done ? :ok : :error) }
       t.column("Title") { |task| link_to task.title, admin_task_path(task) }
@@ -41,6 +40,8 @@ ActiveAdmin.register_page "Dashboard" do
     #         end
     #       end
     #     end
+   
+
     #   end
 
     #   column do
