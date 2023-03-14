@@ -22,7 +22,7 @@ rails generate active_admin:install
 This will generate all needed initializers and migrations for Active Admin to work. It will also create an AdminUser model for authentication, so run rake db:migrate to create all the needed database tables. Apart from that, you need to add one line to your config/environments/development.rb file, so sending emails works:
 
 ```
-onfig.action_mailer.default_url_options = { :host => 'localhost:3000' }
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 ```
 Once that’s done, start  server and hit localhost:3000/admin. You’ll be see a nice login form. Just type “admin@example.com” as the email and “password” as the password, and hit “Login”. You should now see a nice administration interface.
 
